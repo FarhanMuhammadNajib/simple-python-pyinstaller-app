@@ -7,7 +7,7 @@ node {
     }
     stage('Test') {
     echo 'Running tests'
-    withDockerContainer(image: 'qnib/pytest', args: '-it --entrypoint=/bin/bash'){
+    withDockerContainer(image: 'qnib/pytest', args: "-it --entrypoint=''"){
     sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
     sh "junit 'test-reports/results.xml'"
     }
