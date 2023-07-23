@@ -1,5 +1,5 @@
 node {
-    Checkout SCM
+    Checkout scm
     stage('Build') { 
     agent {
         docker {
