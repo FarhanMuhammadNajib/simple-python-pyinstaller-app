@@ -1,6 +1,6 @@
 node {
     checkout scm
-    withDockerContainer(image: 'qnib/pytest'){
+    withDockerContainer(image: 'databricksdocs/pytest:latest'){
     stage('Build') { 
     sh 'python -m py_compile sources/add2vals.py sources/calc.py'   
     }
