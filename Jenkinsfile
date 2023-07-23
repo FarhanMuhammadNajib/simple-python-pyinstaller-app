@@ -1,5 +1,5 @@
 node {
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/FarhanMuhammadNajib/simple-python-pyinstaller-app.git']]])
+    Checkout SCM
     stage('Build') { 
     agent {
         docker {
