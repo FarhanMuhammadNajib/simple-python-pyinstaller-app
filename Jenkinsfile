@@ -11,3 +11,4 @@ node {
     sh "junit 'test-reports/results.xml'"
     }
   }
+}
