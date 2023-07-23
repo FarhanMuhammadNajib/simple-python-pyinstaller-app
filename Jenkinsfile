@@ -6,7 +6,7 @@ node {
         }
     }
     stage('Test') {
-    withDockerContainer(image: 'python:2-alpine'){
+    withDockerContainer(image: 'qnib/pytest'){
     sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
         }
     }
