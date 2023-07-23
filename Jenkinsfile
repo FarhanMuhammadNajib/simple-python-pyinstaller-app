@@ -6,7 +6,7 @@ node {
         }
     }
     stage('Test') {
-    sh 'pip install pytest'
+    sh 'apt install pip && pip install pytest'
     sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
     sh "junit 'test-reports/results.xml'"
     }
