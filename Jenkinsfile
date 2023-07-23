@@ -6,7 +6,7 @@ node {
         }
     }
     stage('Test') {
-    sh 'sudo apt-get install pip && pip install pytest'
+    withDockerContainer(image: 'qnib/pytest'){
     sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
     sh "junit 'test-reports/results.xml'"
     }
